@@ -1,9 +1,9 @@
 module Tone_Generator (
-    input  logic        clk,
-    input  logic        rst,
-    input  logic [9:0]  frequency,
-    output logic        sound
-);
+		input  logic        clk,
+		input  logic        rst,
+		input  logic [9:0]  frequency,
+		output logic        sound
+	);
 
     logic [31:0] tick_counter;
 

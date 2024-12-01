@@ -13,7 +13,7 @@
 						output logic oclk);
 
 	// define the parameter for number of clock edges to count
-	const int HALF_OF_CLK_CYCLE_VALUE = 32'dXXX; // change this value
+	const int HALF_OF_CLK_CYCLE_VALUE = 32'd12500000; // change this value
 	
 	// internal variables for clock divider
 	int count = 32'd0;

@@ -1,5 +1,5 @@
 Analysis & Synthesis report for top_level
-Thu Nov 21 13:58:24 2024
+Sat Nov 30 20:41:50 2024
 Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
 
 
@@ -10,17 +10,7 @@ Quartus Prime Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. State Machine - |top_level|fsm:simon1|state
-  9. Registers Removed During Synthesis
- 10. General Register Statistics
- 11. Multiplexer Restructuring Statistics (Restructuring Performed)
- 12. Port Connectivity Checks: "fsm:simon1"
- 13. Post-Synthesis Netlist Statistics for Top Partition
- 14. Elapsed Time Per Partition
- 15. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Messages
 
 
 
@@ -47,20 +37,20 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Nov 21 13:58:24 2024          ;
+; Analysis & Synthesis Status        ; Failed - Sat Nov 30 20:41:50 2024              ;
 ; Quartus Prime Version              ; 22.1std.2 Build 922 07/20/2023 SC Lite Edition ;
 ; Revision Name                      ; top_level                                      ;
 ; Top-level Entity Name              ; top_level                                      ;
 ; Family                             ; Cyclone IV E                                   ;
-; Total logic elements               ; 469                                            ;
-;     Total combinational functions  ; 407                                            ;
-;     Dedicated logic registers      ; 162                                            ;
-; Total registers                    ; 162                                            ;
-; Total pins                         ; 11                                             ;
-; Total virtual pins                 ; 0                                              ;
-; Total memory bits                  ; 0                                              ;
-; Embedded Multiplier 9-bit elements ; 0                                              ;
-; Total PLLs                         ; 0                                              ;
+; Total logic elements               ; N/A until Partition Merge                      ;
+;     Total combinational functions  ; N/A until Partition Merge                      ;
+;     Dedicated logic registers      ; N/A until Partition Merge                      ;
+; Total registers                    ; N/A until Partition Merge                      ;
+; Total pins                         ; N/A until Partition Merge                      ;
+; Total virtual pins                 ; N/A until Partition Merge                      ;
+; Total memory bits                  ; N/A until Partition Merge                      ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                      ;
+; Total PLLs                         ; N/A until Partition Merge                      ;
 +------------------------------------+------------------------------------------------+
 
 
@@ -159,180 +149,11 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 4           ;
+; Maximum used               ; 1           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                        ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                    ; Library ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------+---------+
-; top_level.sv                     ; yes             ; User SystemVerilog HDL File  ; C:/Users/Minh/Documents/Advanced Digital Design/Final Project/top_level.sv      ;         ;
-; Tone_Generator.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/Minh/Documents/Advanced Digital Design/Final Project/Tone_Generator.sv ;         ;
-; fsm.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/Minh/Documents/Advanced Digital Design/Final Project/fsm.sv            ;         ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------------+---------+
-
-
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 469       ;
-;                                             ;           ;
-; Total combinational functions               ; 407       ;
-; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 199       ;
-;     -- 3 input functions                    ; 79        ;
-;     -- <=2 input functions                  ; 129       ;
-;                                             ;           ;
-; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 299       ;
-;     -- arithmetic mode                      ; 108       ;
-;                                             ;           ;
-; Total registers                             ; 162       ;
-;     -- Dedicated logic registers            ; 162       ;
-;     -- I/O registers                        ; 0         ;
-;                                             ;           ;
-; I/O pins                                    ; 11        ;
-;                                             ;           ;
-; Embedded Multiplier 9-bit elements          ; 0         ;
-;                                             ;           ;
-; Maximum fan-out node                        ; CLK~input ;
-; Maximum fan-out                             ; 162       ;
-; Total fan-out                               ; 1828      ;
-; Average fan-out                             ; 3.09      ;
-+---------------------------------------------+-----------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                  ;
-+------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------+----------------+--------------+
-; Compilation Hierarchy Node   ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                        ; Entity Name    ; Library Name ;
-+------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------+----------------+--------------+
-; |top_level                   ; 407 (0)             ; 162 (0)                   ; 0           ; 0            ; 0       ; 0         ; 11   ; 0            ; |top_level                                 ; top_level      ; work         ;
-;    |fsm:simon1|              ; 407 (327)           ; 162 (129)                 ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|fsm:simon1                      ; fsm            ; work         ;
-;       |Tone_Generator:play1| ; 80 (80)             ; 33 (33)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |top_level|fsm:simon1|Tone_Generator:play1 ; Tone_Generator ; work         ;
-+------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------+----------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-Encoding Type:  One-Hot
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; State Machine - |top_level|fsm:simon1|state                                                                                                                                                   ;
-+----------------------+---------------------+----------------------+----------------------+---------------------+---------------------+-----------------+-----------------+--------------------+
-; Name                 ; state.StateGameOver ; state.StateNextLevel ; state.StateUserInput ; state.StateUserWait ; state.StatePlayWait ; state.StatePlay ; state.StateInit ; state.StatePowerOn ;
-+----------------------+---------------------+----------------------+----------------------+---------------------+---------------------+-----------------+-----------------+--------------------+
-; state.StatePowerOn   ; 0                   ; 0                    ; 0                    ; 0                   ; 0                   ; 0               ; 0               ; 0                  ;
-; state.StateInit      ; 0                   ; 0                    ; 0                    ; 0                   ; 0                   ; 0               ; 1               ; 1                  ;
-; state.StatePlay      ; 0                   ; 0                    ; 0                    ; 0                   ; 0                   ; 1               ; 0               ; 1                  ;
-; state.StatePlayWait  ; 0                   ; 0                    ; 0                    ; 0                   ; 1                   ; 0               ; 0               ; 1                  ;
-; state.StateUserWait  ; 0                   ; 0                    ; 0                    ; 1                   ; 0                   ; 0               ; 0               ; 1                  ;
-; state.StateUserInput ; 0                   ; 0                    ; 1                    ; 0                   ; 0                   ; 0               ; 0               ; 1                  ;
-; state.StateNextLevel ; 0                   ; 1                    ; 0                    ; 0                   ; 0                   ; 0               ; 0               ; 1                  ;
-; state.StateGameOver  ; 1                   ; 0                    ; 0                    ; 0                   ; 0                   ; 0               ; 0               ; 1                  ;
-+----------------------+---------------------+----------------------+----------------------+---------------------+---------------------+-----------------+-----------------+--------------------+
-
-
-+------------------------------------------------------------+
-; Registers Removed During Synthesis                         ;
-+---------------------------------------+--------------------+
-; Register name                         ; Reason for Removal ;
-+---------------------------------------+--------------------+
-; fsm:simon1|state~10                   ; Lost fanout        ;
-; fsm:simon1|state~11                   ; Lost fanout        ;
-; fsm:simon1|state~12                   ; Lost fanout        ;
-; Total Number of Removed Registers = 3 ;                    ;
-+---------------------------------------+--------------------+
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 162   ;
-; Number of registers using Synchronous Clear  ; 84    ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 121   ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                 ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------+
-; 3:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |top_level|fsm:simon1|tick_counter[3]                      ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; Yes        ; |top_level|fsm:simon1|Tone_Generator:play1|tick_counter[0] ;
-; 16:1               ; 2 bits    ; 20 LEs        ; 4 LEs                ; 16 LEs                 ; Yes        ; |top_level|fsm:simon1|user_input[1]                        ;
-; 7:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |top_level|fsm:simon1|tone_sequence_counter[0]             ;
-; 10:1               ; 4 bits    ; 24 LEs        ; 12 LEs               ; 12 LEs                 ; Yes        ; |top_level|fsm:simon1|led[1]                               ;
-; 10:1               ; 5 bits    ; 30 LEs        ; 5 LEs                ; 25 LEs                 ; Yes        ; |top_level|fsm:simon1|seq_counter[0]                       ;
-; 10:1               ; 10 bits   ; 60 LEs        ; 10 LEs               ; 50 LEs                 ; Yes        ; |top_level|fsm:simon1|millis_counter[5]                    ;
-; 21:1               ; 2 bits    ; 28 LEs        ; 20 LEs               ; 8 LEs                  ; Yes        ; |top_level|fsm:simon1|sound_freq[9]                        ;
-; 22:1               ; 2 bits    ; 28 LEs        ; 20 LEs               ; 8 LEs                  ; Yes        ; |top_level|fsm:simon1|sound_freq[3]                        ;
-; 12:1               ; 2 bits    ; 16 LEs        ; 6 LEs                ; 10 LEs                 ; No         ; |top_level|fsm:simon1|state                                ;
-; 12:1               ; 2 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; No         ; |top_level|fsm:simon1|state                                ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "fsm:simon1"                                                                                                                                                                                          ;
-+------------------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port                   ; Type  ; Severity ; Details                                                                                                                                                                             ;
-+------------------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; ticks_per_milli        ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (16 bits) it drives.  The 16 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; ticks_per_milli[5..4]  ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
-; ticks_per_milli[15..6] ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
-; ticks_per_milli[3..2]  ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
-; ticks_per_milli[1]     ; Input ; Info     ; Stuck at VCC                                                                                                                                                                        ;
-; ticks_per_milli[0]     ; Input ; Info     ; Stuck at GND                                                                                                                                                                        ;
-+------------------------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; boundary_port         ; 11                          ;
-; cycloneiii_ff         ; 162                         ;
-;     ENA               ; 70                          ;
-;     ENA SCLR          ; 51                          ;
-;     SCLR              ; 33                          ;
-;     plain             ; 8                           ;
-; cycloneiii_lcell_comb ; 407                         ;
-;     arith             ; 108                         ;
-;         2 data inputs ; 67                          ;
-;         3 data inputs ; 41                          ;
-;     normal            ; 299                         ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 6                           ;
-;         2 data inputs ; 55                          ;
-;         3 data inputs ; 38                          ;
-;         4 data inputs ; 199                         ;
-;                       ;                             ;
-; Max LUT depth         ; 9.00                        ;
-; Average LUT depth     ; 5.90                        ;
-+-----------------------+-----------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:02     ;
-+----------------+--------------+
 
 
 +-------------------------------+
@@ -341,61 +162,41 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.2 Build 922 07/20/2023 SC Lite Edition
-    Info: Processing started: Thu Nov 21 13:58:00 2024
+    Info: Processing started: Sat Nov 30 20:41:30 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off simon_says -c top_level
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
-Info (12021): Found 1 design units, including 1 entities, in source file top_level.sv
-    Info (12023): Found entity 1: top_level File: C:/Users/Minh/Documents/Advanced Digital Design/Final Project/top_level.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file tone_generator.sv
-    Info (12023): Found entity 1: Tone_Generator File: C:/Users/Minh/Documents/Advanced Digital Design/Final Project/Tone_Generator.sv Line: 1
+    Info (12023): Found entity 1: Tone_Generator File: C:/Users/Minh/Documents/GitHub/SimonSays/Tone_Generator.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file memory.sv
+    Info (12023): Found entity 1: memory File: C:/Users/Minh/Documents/GitHub/SimonSays/memory.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file clockdiv.sv
+    Info (12023): Found entity 1: clockdiv File: C:/Users/Minh/Documents/GitHub/SimonSays/clockdiv.sv Line: 12
+Info (12021): Found 1 design units, including 1 entities, in source file a_assert_s_deassert.sv
+    Info (12023): Found entity 1: a_assert_s_deassert File: C:/Users/Minh/Documents/GitHub/SimonSays/a_assert_s_deassert.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file top_level.sv
+    Info (12023): Found entity 1: top_level File: C:/Users/Minh/Documents/GitHub/SimonSays/top_level.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file tb_memory.sv
+    Info (12023): Found entity 1: tb_memory File: C:/Users/Minh/Documents/GitHub/SimonSays/tb_memory.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file memory_fsm.sv
+    Info (12023): Found entity 1: memory_fsm File: C:/Users/Minh/Documents/GitHub/SimonSays/memory_fsm.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file tb_memory_fsm.sv
+    Info (12023): Found entity 1: tb_memory_fsm File: C:/Users/Minh/Documents/GitHub/SimonSays/tb_memory_fsm.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file random_sequence_generator.sv
-    Info (12023): Found entity 1: Random_Sequence_Generator File: C:/Users/Minh/Documents/Advanced Digital Design/Final Project/Random_Sequence_Generator.sv Line: 1
+    Info (12023): Found entity 1: Random_Sequence_Generator File: C:/Users/Minh/Documents/GitHub/SimonSays/Random_Sequence_Generator.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file led_and_display_control.sv
-    Info (12023): Found entity 1: LED_and_Display_Control File: C:/Users/Minh/Documents/Advanced Digital Design/Final Project/LED_and_Display_Control.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file fsm.sv
-    Info (12023): Found entity 1: fsm File: C:/Users/Minh/Documents/Advanced Digital Design/Final Project/fsm.sv Line: 1
+    Info (12023): Found entity 1: LED_and_Display_Control File: C:/Users/Minh/Documents/GitHub/SimonSays/LED_and_Display_Control.sv Line: 1
 Info (12127): Elaborating entity "top_level" for the top level hierarchy
-Info (12128): Elaborating entity "fsm" for hierarchy "fsm:simon1" File: C:/Users/Minh/Documents/Advanced Digital Design/Final Project/top_level.sv Line: 22
-Warning (10230): Verilog HDL assignment warning at fsm.sv(60): truncated value with size 32 to match size of target (16) File: C:/Users/Minh/Documents/Advanced Digital Design/Final Project/fsm.sv Line: 60
-Warning (10230): Verilog HDL assignment warning at fsm.sv(61): truncated value with size 32 to match size of target (2) File: C:/Users/Minh/Documents/Advanced Digital Design/Final Project/fsm.sv Line: 61
-Warning (10230): Verilog HDL assignment warning at fsm.sv(65): truncated value with size 32 to match size of target (10) File: C:/Users/Minh/Documents/Advanced Digital Design/Final Project/fsm.sv Line: 65
-Warning (10230): Verilog HDL assignment warning at fsm.sv(105): truncated value with size 32 to match size of target (5) File: C:/Users/Minh/Documents/Advanced Digital Design/Final Project/fsm.sv Line: 105
-Info (10264): Verilog HDL Case Statement information at fsm.sv(115): all case item expressions in this case statement are onehot File: C:/Users/Minh/Documents/Advanced Digital Design/Final Project/fsm.sv Line: 115
-Warning (10230): Verilog HDL assignment warning at fsm.sv(134): truncated value with size 32 to match size of target (5) File: C:/Users/Minh/Documents/Advanced Digital Design/Final Project/fsm.sv Line: 134
-Warning (10230): Verilog HDL assignment warning at fsm.sv(137): truncated value with size 32 to match size of target (5) File: C:/Users/Minh/Documents/Advanced Digital Design/Final Project/fsm.sv Line: 137
-Warning (10230): Verilog HDL assignment warning at fsm.sv(157): truncated value with size 32 to match size of target (3) File: C:/Users/Minh/Documents/Advanced Digital Design/Final Project/fsm.sv Line: 157
-Warning (10230): Verilog HDL assignment warning at fsm.sv(165): truncated value with size 32 to match size of target (10) File: C:/Users/Minh/Documents/Advanced Digital Design/Final Project/fsm.sv Line: 165
-Warning (10230): Verilog HDL assignment warning at fsm.sv(173): truncated value with size 32 to match size of target (3) File: C:/Users/Minh/Documents/Advanced Digital Design/Final Project/fsm.sv Line: 173
-Warning (10030): Net "GAME_TONES.data_a" at fsm.sv(13) has no driver or initial value, using a default initial value '0' File: C:/Users/Minh/Documents/Advanced Digital Design/Final Project/fsm.sv Line: 13
-Warning (10030): Net "GAME_TONES.waddr_a" at fsm.sv(13) has no driver or initial value, using a default initial value '0' File: C:/Users/Minh/Documents/Advanced Digital Design/Final Project/fsm.sv Line: 13
-Warning (10030): Net "SUCCESS_TONES.data_a" at fsm.sv(14) has no driver or initial value, using a default initial value '0' File: C:/Users/Minh/Documents/Advanced Digital Design/Final Project/fsm.sv Line: 14
-Warning (10030): Net "SUCCESS_TONES.waddr_a" at fsm.sv(14) has no driver or initial value, using a default initial value '0' File: C:/Users/Minh/Documents/Advanced Digital Design/Final Project/fsm.sv Line: 14
-Warning (10030): Net "GAMEOVER_TONES.data_a" at fsm.sv(15) has no driver or initial value, using a default initial value '0' File: C:/Users/Minh/Documents/Advanced Digital Design/Final Project/fsm.sv Line: 15
-Warning (10030): Net "GAMEOVER_TONES.waddr_a" at fsm.sv(15) has no driver or initial value, using a default initial value '0' File: C:/Users/Minh/Documents/Advanced Digital Design/Final Project/fsm.sv Line: 15
-Warning (10030): Net "GAME_TONES.we_a" at fsm.sv(13) has no driver or initial value, using a default initial value '0' File: C:/Users/Minh/Documents/Advanced Digital Design/Final Project/fsm.sv Line: 13
-Warning (10030): Net "SUCCESS_TONES.we_a" at fsm.sv(14) has no driver or initial value, using a default initial value '0' File: C:/Users/Minh/Documents/Advanced Digital Design/Final Project/fsm.sv Line: 14
-Warning (10030): Net "GAMEOVER_TONES.we_a" at fsm.sv(15) has no driver or initial value, using a default initial value '0' File: C:/Users/Minh/Documents/Advanced Digital Design/Final Project/fsm.sv Line: 15
-Info (12128): Elaborating entity "Tone_Generator" for hierarchy "fsm:simon1|Tone_Generator:play1" File: C:/Users/Minh/Documents/Advanced Digital Design/Final Project/fsm.sv Line: 46
-Info (276014): Found 4 instances of uninferred RAM logic
-    Info (276004): RAM logic "fsm:simon1|seq" is uninferred due to inappropriate RAM size File: C:/Users/Minh/Documents/Advanced Digital Design/Final Project/fsm.sv Line: 30
-    Info (276004): RAM logic "fsm:simon1|GAME_TONES" is uninferred due to inappropriate RAM size File: C:/Users/Minh/Documents/Advanced Digital Design/Final Project/fsm.sv Line: 13
-    Info (276004): RAM logic "fsm:simon1|SUCCESS_TONES" is uninferred due to inappropriate RAM size File: C:/Users/Minh/Documents/Advanced Digital Design/Final Project/fsm.sv Line: 14
-    Info (276004): RAM logic "fsm:simon1|GAMEOVER_TONES" is uninferred due to inappropriate RAM size File: C:/Users/Minh/Documents/Advanced Digital Design/Final Project/fsm.sv Line: 15
-Critical Warning (127005): Memory depth (8) in the design file differs from memory depth (7) in the Memory Initialization File "C:/Users/Minh/Documents/Advanced Digital Design/Final Project/db/top_level.ram1_fsm_1a5dd.hdl.mif" -- setting initial value for remaining addresses to 0
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Info (286030): Timing-Driven Synthesis is running
-Info (17049): 3 registers lost all their fanouts during netlist optimizations.
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 483 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 6 input pins
-    Info (21059): Implemented 5 output pins
-    Info (21061): Implemented 472 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 21 warnings
-    Info: Peak virtual memory: 13235 megabytes
-    Info: Processing ended: Thu Nov 21 13:58:24 2024
-    Info: Elapsed time: 00:00:24
-    Info: Total CPU time (on all processors): 00:00:50
+Warning (10034): Output port "SEG_DISPLAY" at top_level.sv(6) has no driver File: C:/Users/Minh/Documents/GitHub/SimonSays/top_level.sv Line: 6
+Info (12128): Elaborating entity "Random_Sequence_Generator" for hierarchy "Random_Sequence_Generator:rng" File: C:/Users/Minh/Documents/GitHub/SimonSays/top_level.sv Line: 19
+Info (12128): Elaborating entity "memory" for hierarchy "memory:mem" File: C:/Users/Minh/Documents/GitHub/SimonSays/top_level.sv Line: 27
+Warning (12125): Using design file fsm.sv, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: fsm File: C:/Users/Minh/Documents/GitHub/SimonSays/fsm.sv Line: 1
+Error (10161): Verilog HDL error at fsm.sv(67): object "GAME_TONES" is not declared. Verify the object name is correct. If the name is correct, declare the object. File: C:/Users/Minh/Documents/GitHub/SimonSays/fsm.sv Line: 67
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 3 warnings
+    Error: Peak virtual memory: 13163 megabytes
+    Error: Processing ended: Sat Nov 30 20:41:50 2024
+    Error: Elapsed time: 00:00:20
+    Error: Total CPU time (on all processors): 00:00:46
 
 

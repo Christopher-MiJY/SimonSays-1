@@ -1,19 +1,19 @@
-module memory (
-    input  logic        clk,
-    input  logic        write_enable,
-    input  logic [4:0]  addr,
-    input  logic [1:0]  write_data,
-    output logic [1:0]  read_data
-);
+module memory(
+		input logic[5:0] data_In,  // 6 bits per location
+		input logic[4:0] w_ptr,     // 5 bits for 30 locations
+		input logic[4:0] r_ptr,     // 5 bits for 30 locations
+		input logic w_en, r_en, clk,
+		output logic[5:0] data_Out  // 6 bits per location
+	);		
 
-    logic [1:0] mem_array [31:0];
+	logic [5:0] mem [29:0];  // 30 locations with 6 bits each
 
-    always_ff @(posedge clk) begin
-        if (write_enable) begin
-            mem_array[addr] <= write_data;
-        end
-    end
+	always_ff@(negedge clk) begin
+		if (w_en)
+			mem[w_ptr] <= data_In;
 
-    assign read_data = mem_array[addr];
-
+		if (r_en)
+			data_Out <= mem[r_ptr];
+	end
+	
 endmodule
