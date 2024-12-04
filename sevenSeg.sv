@@ -1,4 +1,4 @@
-module Lab9SevenSeg(
+module sevenSeg(
 	input logic [5:0] result_data,
 	output logic [6:0] high_digit_display,
 	output logic [6:0] low_digit_display
