@@ -6,7 +6,7 @@ module memory(
 		output logic[5:0] data_Out  // 6 bits per location
 	);		
 
-	logic [5:0] mem [29:0];  // 30 locations with 6 bits each
+	logic [1:0] mem [29:0];  // 30 locations with 2 bits each
 
 	always_ff@(negedge clk) begin
 		if (w_en)

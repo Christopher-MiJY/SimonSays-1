@@ -1,10 +1,7 @@
 m255
 K4
 z2
-Z0 !s99 nomlopt
-R0
-R0
-R0
+!s99 nomlopt
 !s11f vlog 2021.2 2021.04, Apr 14 2021
 13
 !s112 1.1
@@ -12,62 +9,15 @@ R0
 !i10e 25
 !i10f 100
 cModel Technology
-Z1 dC:/Users/Minh/Documents/GitHub/SimonSays
+Z0 dC:/Users/Minh/Documents/GitHub/SimonSays
 T_opt
-!s110 1733027686
-V`n^Y>cDPm8;9Oe2Aj]Ih;0
+!s110 1733358979
+Va]J2?B9IP4>KQX_O`KGN[1
 04 13 4 work tb_memory_fsm fast 0
-=1-000c291d7180-674be765-32f-bb8
+=1-000c291d7180-6750f582-284-13ec
 !s124 OEM10U2 
 o-quiet -auto_acc_if_foreign -work work +acc
-Z2 tCvgOpt 0
+Z1 tCvgOpt 0
 n@_opt
 OL;O;2021.2;73
-vmemory_fsm
-Z3 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
-Z4 !s110 1733027684
-!i10b 1
-!s100 o`6z8YKlLl8J>LQnQVUb01
-IP8`H:7eKX>zT][_J650iW0
-S1
-R1
-w1733027326
-8C:/Users/Minh/Documents/GitHub/SimonSays/memory_fsm.sv
-FC:/Users/Minh/Documents/GitHub/SimonSays/memory_fsm.sv
-!i122 1
-L0 1 94
-Z5 VDg1SIo80bB@j0V0VzS_@n1
-Z6 OL;L;2021.2;73
-r1
-!s85 0
-31
-Z7 !s108 1733027684.000000
-!s107 C:/Users/Minh/Documents/GitHub/SimonSays/memory_fsm.sv|
-!s90 -reportprogress|300|-sv|-work|work|C:/Users/Minh/Documents/GitHub/SimonSays/memory_fsm.sv|
-!i113 0
-Z8 o-sv -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-R2
-vtb_memory_fsm
-R3
-R4
-!i10b 1
-!s100 Q]2R6SmT?4d_^zYkSX?I[1
-I9D[Zg5fJPHJ1Y?3?@T88X1
-S1
-R1
-w1733027677
-8C:/Users/Minh/Documents/GitHub/SimonSays/tb_memory_fsm.sv
-FC:/Users/Minh/Documents/GitHub/SimonSays/tb_memory_fsm.sv
-!i122 0
-L0 1 88
-R5
-R6
-r1
-!s85 0
-31
-R7
-!s107 C:/Users/Minh/Documents/GitHub/SimonSays/tb_memory_fsm.sv|
-!s90 -reportprogress|300|-sv|-work|work|C:/Users/Minh/Documents/GitHub/SimonSays/tb_memory_fsm.sv|
-!i113 0
-R8
-R2
+R0

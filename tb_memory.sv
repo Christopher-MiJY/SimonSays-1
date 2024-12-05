@@ -52,20 +52,12 @@ module tb_memory();
 		Mem_Write(5'd1, 1'b1, 6'd1);
 		Mem_Write(5'd2, 1'b1, 6'd2);
 		Mem_Write(5'd3, 1'b1, 6'd3);
-		Mem_Write(5'd4, 1'b1, 6'd4);
-		Mem_Write(5'd5, 1'b1, 6'd5);
-		Mem_Write(5'd6, 1'b1, 6'd6);
-		Mem_Write(5'd7, 1'b1, 6'd7);
 		
 		// Read: read_ptr, read_enable, data_Output
 		Mem_Read(5'd0, 1'b1, 6'd0);
 		Mem_Read(5'd1, 1'b1, 6'd1);
 		Mem_Read(5'd2, 1'b1, 6'd2);
 		Mem_Read(5'd3, 1'b1, 6'd3);
-		Mem_Read(5'd4, 1'b1, 6'd4);
-		Mem_Read(5'd5, 1'b1, 6'd5);
-		Mem_Read(5'd6, 1'b1, 6'd6);
-		Mem_Read(5'd7, 1'b1, 6'd7);
 
 	end
 endmodule

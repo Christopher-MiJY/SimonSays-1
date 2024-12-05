@@ -83,5 +83,4 @@ set_global_assignment -name SYSTEMVERILOG_FILE top_level.sv
 set_global_assignment -name SYSTEMVERILOG_FILE tb_memory.sv
 set_global_assignment -name SYSTEMVERILOG_FILE memory_fsm.sv
 set_global_assignment -name SYSTEMVERILOG_FILE tb_memory_fsm.sv
-set_global_assignment -name SYSTEMVERILOG_FILE Random_Sequence_Generator.sv
 set_global_assignment -name SYSTEMVERILOG_FILE LED_and_Display_Control.sv
