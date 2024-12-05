@@ -1,46 +1,35 @@
 module TB_Random;
 
-    // Testbench Signals
-    logic clk;                // Clock signal
-    logic rst;                // Reset signal
-    logic [1:0] random_seq;   // Output random sequence
+    logic clk;
+    logic rst;
+    logic [1:0] random_seq;
 
-    // Instantiate the Random Sequence Generator module
-    Random_Sequence_Generator uut (
-        .clk        (clk),
-        .rst        (rst),
-        .random_seq (random_seq)
+    Random dut (
+        .clk(clk),
+        .rst(rst),
+        .random_seq(random_seq)
     );
 
-    // Clock generation
     initial begin
         clk = 0;
-        forever #5 clk = ~clk; // Clock period = 10 time units
+        forever #5 clk = ~clk;
     end
 
-    // Test sequence
     initial begin
-        // Initialize signals
-        rst = 1;
-        #10; // Hold reset for 10 time units
+        $display("Starting Random Sequence Generator Test...");
         
-        rst = 0; // Release reset
-        #100; // Allow the generator to run for a while
-
-        // Simulate a second reset
         rst = 1;
         #10;
         rst = 0;
-        #100;
 
-        // Finish simulation
+        repeat (10) begin
+            @(posedge clk);
+            #1;
+            $display("Time: %0t | Random Sequence: %b", $time, random_seq);
+        end
+
+        $display("Test Completed.");
         $stop;
-    end
-
-    // Monitor the outputs
-    initial begin
-        $monitor("Time: %0t | Reset: %b | Random Sequence: %b",
-                 $time, rst, random_seq);
     end
 
 endmodule
