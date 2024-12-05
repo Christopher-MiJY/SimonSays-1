@@ -17,7 +17,7 @@ module TB_FSM;
     logic [1:0] mem_data;
 
     // Instantiate the FSM
-    fsm dut (
+    FSM dut (
         .clk(clk),
         .rst(rst),
         .btn(btn),
