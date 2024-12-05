@@ -1,7 +1,9 @@
 m255
 K4
 z2
-!s99 nomlopt
+Z0 !s99 nomlopt
+R0
+R0
 !s11f vlog 2021.2 2021.04, Apr 14 2021
 13
 !s112 1.1
@@ -9,15 +11,15 @@ z2
 !i10e 25
 !i10f 100
 cModel Technology
-Z0 dC:/Users/Minh/Documents/GitHub/SimonSays
+Z1 dC:/Users/Minh/Documents/GitHub/SimonSays
 T_opt
-!s110 1733358979
-Va]J2?B9IP4>KQX_O`KGN[1
+!s110 1733365218
+V_H6:>[8J949PPYzongHif0
 04 13 4 work tb_memory_fsm fast 0
-=1-000c291d7180-6750f582-284-13ec
+=1-000c291d7180-67510de2-10e-2cbc
 !s124 OEM10U2 
 o-quiet -auto_acc_if_foreign -work work +acc
-Z1 tCvgOpt 0
+Z2 tCvgOpt 0
 n@_opt
 OL;O;2021.2;73
-R0
+R1
