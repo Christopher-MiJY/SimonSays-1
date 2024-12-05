@@ -8,7 +8,7 @@ vmap work work
 ### Compile code ###
 ### Enter files here; copy line for multiple files ###
 vlog -sv -work work [pwd]/TB_Random.sv
-vlog -suppress 7061 -sv -work work [pwd]/Random_Sequence_Generator.sv
+vlog -suppress 7061 -sv -work work [pwd]/Random.sv
 
 ### ---------------------------------------------- ###
 ### Load design for simulation ###
