@@ -7,14 +7,14 @@ vmap work work
 ### ---------------------------------------------- ###
 ### Compile code ###
 ### Enter files here; copy line for multiple files ###
-vlog -sv -work work [pwd]/TB_Random.sv
-vlog -suppress 7061 -sv -work work [pwd]/Random.sv
+vlog -sv -work work [pwd]/TB_FSM.sv
+vlog -suppress 7061 -sv -work work [pwd]/FSM.sv
 
 ### ---------------------------------------------- ###
 ### Load design for simulation ###
 ### Replace topLevelModule with the name of your top level module (no .sv) ###
 ### Do not duplicate! ###
-vsim -voptargs=+acc TB_Random
+vsim -voptargs=+acc TB_FSM
 
 ### ---------------------------------------------- ###
 ### Add waves here ###
