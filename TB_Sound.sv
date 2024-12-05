@@ -6,7 +6,7 @@ module TB_Sound;
     logic sound_output;
     logic [9:0] frequency_output;
 
-    sound_controller dut (
+    Sound dut (
         .clk(clk),
         .rst(reset),
         .led_color(sound_select),

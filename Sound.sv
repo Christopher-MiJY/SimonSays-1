@@ -1,4 +1,4 @@
-module sound_controller (
+module Sound (
     input  logic        clk,        // Clock signal
     input  logic        rst,        // Reset signal
     input  logic [3:0]  led_color,  // Each bit represents a color state (Red, Blue, Green, Yellow)

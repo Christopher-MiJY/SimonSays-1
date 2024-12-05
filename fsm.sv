@@ -1,11 +1,9 @@
-module fsm (
+module FSM (
     input  logic        clk,
     input  logic        rst,
     input  logic [3:0]  btn,
     input  logic [1:0]  random_seq,
     output logic [3:0]  led,
-    output logic        sound,
-    output logic [9:0]  frequency,
     output logic        start_round,
     output logic        display_loss,
     output logic        mem_write,
@@ -43,13 +41,12 @@ module fsm (
         display_loss = 0;
         mem_write    = 0;
         mem_addr     = 0;
-        frequency    = 0;
         led          = 4'b0000;
         next_state   = state;
 
         case (state)
             STATE_POWER_ON: begin
-                led = 4'b1111;
+                led = 4'b1111; // 所有灯亮
                 if (btn != 4'b0000) next_state = STATE_INIT;
             end
 
@@ -63,8 +60,7 @@ module fsm (
 
             STATE_PLAY_SEQUENCE: begin
                 mem_addr = seq_counter;
-                led[mem_data] = 1;
-                frequency = GAME_TONES[mem_data];
+                led[mem_data] = 1; // 点亮对应的灯
                 if (seq_counter == seq_length - 1) 
                     next_state = STATE_WAIT_INPUT;
                 else 
@@ -110,5 +106,4 @@ module fsm (
             end
         endcase
     end
-
 endmodule
