@@ -41,11 +41,4 @@ module top_level (
 		.mem_data(mem_data)
 	);
 
-	Tone_Generator tone_gen (
-		.clk(CLK),
-		.rst(RST),
-		.frequency(frequency),
-		.sound(SOUND)
-	);
-
 endmodule
